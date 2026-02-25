@@ -1,2 +1,0 @@
-/* Adding to script.js: Toast notification logic */
-/* Adding categories to course data */
