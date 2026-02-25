@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educativa.id | Platform LMS Modern</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="container navbar-container">
+        <div class="nav-logo">
+          <!-- Using text as placeholder for logo, can be replaced with img -->
+          <a href="#">Educativa<span>.id</span></a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-icons">
+          <div class="icon-wrapper">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge" id="wishlist-badge">0</span>
+          </div>
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge" id="cart-badge">0</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Tingkatkan Skill Anda Bersama <span>Educativa</span>
+          </h1>
+          <p class="hero-subtitle">
+            Platform Learning Management System (LMS) terdepan dengan materi
+            terstruktur dari praktisi ahli. Belajar fleksibel kapan saja, di
+            mana saja.
+          </p>
+          <div class="hero-cta">
+            <a href="#courses" class="btn btn-primary">Lihat Kursus</a>
+            <a href="#about" class="btn btn-outline">Pelajari Lebih Lanjut</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-placeholder">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Students Learning"
+            />
+            <div class="floating-card float-1">
+              <div class="flex-center">
+                <i class="fas fa-certificate text-teal"></i>
+                <div>
+                  <h4>Sertifikat Resmi</h4>
+                  <p>Diakui Industri</p>
+                </div>
+              </div>
+            </div>
+            <div class="floating-card float-2">
+              <div class="flex-center">
+                <i class="fas fa-users text-yellow"></i>
+                <div>
+                  <h4>10rb+ Siswa</h4>
+                  <p>Telah Bergabung</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES / ABOUT SECTION -->
+    <section class="features" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa Memilih Educativa?</h2>
+                <p>Kami hadir untuk memberikan solusi pembelajaran terbaik bagi pengembangan karir Anda.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Tutor Praktisi Ahli</h3>
+                    <p>Belajar langsung dari ekspert industri yang berpengalaman.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Kurikulum Terstruktur</h3>
+                    <p>Materi pembelajaran disusun secara sistematis dan mudah dipahami.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Sertifikat Resmi</h3>
+                    <p>Dapatkan sertifikat kompetensi setelah menyelesaikan kursus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION (To be populated by JS) -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jelajahi Program Belajar Kami</h2>
+                <p>Pilih kategori kursus yang sesuai dengan kebutuhan pengembangan karir Anda.</p>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="course-filters" id="course-filters">
+                <button class="filter-btn active" data-filter="all">Semua Kategori</button>
+                <button class="filter-btn" data-filter="Programming">Programming</button>
+                <button class="filter-btn" data-filter="Data">Data Science</button>
+                <button class="filter-btn" data-filter="Design">Design</button>
+                <button class="filter-btn" data-filter="Marketing">Marketing</button>
+            </div>
+
+            <div class="course-grid" id="course-grid">
+                <!-- Cards will be dynamically inserted here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO MODAL -->
+    <div class="modal-overlay" id="promo-modal">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Promo"
+            />
+          </div>
+          <div class="modal-text">
+            <h3>Diskon Spesial 50%!</h3>
+            <p>
+              Gunakan kode promo <strong>EDU50</strong> untuk semua kelas
+              Premium hari ini.
+            </p>
+            <button
+              class="btn btn-primary mt-2"
+              onclick="
+                document.getElementById('promo-modal').style.display = 'none'
+              "
+            >
+              Klaim Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3>Educativa<span>.id</span></h3>
+                <p>Platform Learning Management System (LMS) terbaik untuk mendongkrak skill dan karir Anda menuju tingkat profesional.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Menu Cepat</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontak Kami</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> halo@educativa.id</li>
+                    <li><i class="fas fa-phone-alt"></i> +62 812-3456-7890</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Educativa.id. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- TOAST CONTAINER -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- MAIN SCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
