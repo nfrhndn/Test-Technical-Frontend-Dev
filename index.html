@@ -24,8 +24,9 @@
     <nav class="navbar" id="navbar">
       <div class="container navbar-container">
         <div class="nav-logo">
-          <!-- Using text as placeholder for logo, can be replaced with img -->
-          <a href="#">Educativa<span>.id</span></a>
+          <a href="#">
+            <img src="assets/Logo-Educativa.png" alt="Educativa Logo" style="height: 40px;">
+          </a>
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -35,21 +36,43 @@
 
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#courses">Layanan</a></li>
+          <li><a href="#contact">Kontak Kami</a></li>
+          <li class="nav-icons-wrapper">
+            <div class="nav-icons">
+              <a href="https://api.whatsapp.com/send?phone=6287785330349" target="_blank" class="btn btn-primary btn-pill btn-sm">Mulai Konsultasi <i class="fas fa-arrow-right"></i></a>
+              <div class="icon-wrapper" onclick="toggleNavDropdown('wishlist-dropdown')">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge" id="wishlist-badge">0</span>
+                <!-- Wishlist Dropdown -->
+                <div class="nav-dropdown" id="wishlist-dropdown">
+                  <div class="dropdown-header">
+                    <h4>Wishlist Saya</h4>
+                  </div>
+                  <div class="dropdown-body" id="wishlist-items-container">
+                    <p class="empty-notif">Belum ada kelas di wishlist.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-wrapper" onclick="toggleNavDropdown('cart-dropdown')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="badge" id="cart-badge">0</span>
+                <!-- Cart Dropdown -->
+                <div class="nav-dropdown" id="cart-dropdown">
+                  <div class="dropdown-header">
+                    <h4>Keranjang Belanja</h4>
+                  </div>
+                  <div class="dropdown-body" id="cart-items-container">
+                    <p class="empty-notif">Keranjang Anda kosong.</p>
+                  </div>
+                  <div class="dropdown-footer">
+                    <button class="btn btn-primary" style="width: 100%; border-radius: 8px;" onclick="alert('Checkout fitur belum tersedia di demo ini.')">Lanjut Pembayaran</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
-
-        <div class="nav-icons">
-          <div class="icon-wrapper">
-            <i class="fa-regular fa-heart"></i>
-            <span class="badge" id="wishlist-badge">0</span>
-          </div>
-          <div class="icon-wrapper">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span class="badge" id="cart-badge">0</span>
-          </div>
-        </div>
       </div>
     </nav>
 
@@ -58,96 +81,185 @@
       <div class="container hero-container">
         <div class="hero-content">
           <h1 class="hero-title">
-            Tingkatkan Skill Anda Bersama <span>Educativa</span>
+            Platform All-In-One<br><span>Riset & Kuliahmu</span>
           </h1>
           <p class="hero-subtitle">
-            Platform Learning Management System (LMS) terdepan dengan materi
-            terstruktur dari praktisi ahli. Belajar fleksibel kapan saja, di
-            mana saja.
+            Dari bimbingan skripsi, olah data, kursus analisis, sampai publikasi jurnal, semua tersedia dalam satu platform terpercaya!
           </p>
           <div class="hero-cta">
-            <a href="#courses" class="btn btn-primary">Lihat Kursus</a>
-            <a href="#about" class="btn btn-outline">Pelajari Lebih Lanjut</a>
+            <a href="https://api.whatsapp.com/send?phone=6287785330349" class="btn btn-primary btn-pill">Konsultasi Gratis <i class="fas fa-arrow-right"></i></a>
+            <a href="#courses" class="btn btn-outline btn-pill">Lihat Testimoni</a>
+          </div>
+          <div class="hero-hashtag-wrap mt-2">
+            <span class="hashtag">#YourEducativePartner</span>
           </div>
         </div>
         <div class="hero-image">
-          <div class="image-placeholder">
+          <div class="image-wrapper">
+            <!-- Using a representative image for the hero -->
             <img
               src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Students Learning"
+              alt="Educativa Platform Riset"
+              class="main-hero-img"
             />
-            <div class="floating-card float-1">
-              <div class="flex-center">
-                <i class="fas fa-certificate text-teal"></i>
-                <div>
-                  <h4>Sertifikat Resmi</h4>
-                  <p>Diakui Industri</p>
-                </div>
-              </div>
+            <div class="floating-bubble bubble-1">
+              <i class="fas fa-chart-line"></i>
             </div>
-            <div class="floating-card float-2">
-              <div class="flex-center">
-                <i class="fas fa-users text-yellow"></i>
-                <div>
-                  <h4>10rb+ Siswa</h4>
-                  <p>Telah Bergabung</p>
-                </div>
-              </div>
+            <div class="floating-bubble bubble-2">
+              <i class="fas fa-book-open"></i>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURES / ABOUT SECTION -->
-    <section class="features" id="about">
+
+    <!-- STATS BANNER -->
+    <section class="stats-banner">
+        <div class="container stats-container">
+            <div class="stat-item">
+                <h3 class="stat-num">965 <span class="text-yellow">+</span></h3>
+                <p class="stat-label">Project Selesai</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-num">534 <span class="text-yellow">+</span></h3>
+                <p class="stat-label">Klien Puas</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-num">402 <span class="text-yellow">+</span></h3>
+                <p class="stat-label">Konsultan Expert</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-num">300 <span class="text-yellow">+</span></h3>
+                <p class="stat-label">Materi KelasRiset</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTEGRATED SERVICES SLIDER SECTION -->
+    <section class="services-slider-section" id="courses">
         <div class="container">
             <div class="section-header">
-                <h2>Mengapa Memilih Educativa?</h2>
-                <p>Kami hadir untuk memberikan solusi pembelajaran terbaik bagi pengembangan karir Anda.</p>
+                <h2>Pilih Layanan Sesuai Kebutuhanmu</h2>
+                <div class="divider-wave"></div>
+                <p style="margin-top: 1rem;">Harga transparan dengan jaminan 100% perlindungan garansi. Kualitas terbaik untuk menunjang penelitianmu.</p>
+            </div>
+            
+            <div class="slider-wrapper">
+                <button class="slider-btn prev-btn" id="slider-prev" aria-label="Previous Services">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="slider-container" id="services-slider-container">
+                    <!-- Cards will be dynamically inserted here via JavaScript -->
+                </div>
+
+                <button class="slider-btn next-btn" id="slider-next" aria-label="Next Services">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 100% GUARANTEE SERVICE SECTION -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>100% Guarantee Service</h2>
+                <div class="divider-wave"></div>
+                <p style="margin-top: 1rem;">Educativa memberikan jaminan proteksi 100% Guarantee demi kenyamanan dan jaminan rasa aman seluruh klien kami.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3>Tutor Praktisi Ahli</h3>
-                    <p>Belajar langsung dari ekspert industri yang berpengalaman.</p>
+                    <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Garansi Uang Kembali</h3>
+                    <p>Potensi refund dana hingga 100% jika hasil tidak sesuai dengan MoU yang disepakati di awal.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Kurikulum Terstruktur</h3>
-                    <p>Materi pembelajaran disusun secara sistematis dan mudah dipahami.</p>
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Konsultasi Sepuasnya</h3>
+                    <p>Bebas bertukar pikiran secara langsung (tatap muka daring) dengan konsultan tanpa batas kuota meeting.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
-                    <h3>Sertifikat Resmi</h3>
-                    <p>Dapatkan sertifikat kompetensi setelah menyelesaikan kursus.</p>
+                    <div class="feature-icon"><i class="fas fa-box-open"></i></div>
+                    <h3>Selesai Tepat Waktu</h3>
+                    <p>Timeline pengerjaan disiplin dan sistematis untuk pastikan project selesai sebelum deadline terlewat.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-friends"></i></div>
+                    <h3>Bebas Ganti Konsultan</h3>
+                    <p>Fasilitas ganti pendamping secara gratis bila dirasa tidak cocok demi menjaga kenyamanan maksimal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Garansi Revisi Tuntas</h3>
+                    <p>Seluruh paket bimbingan include perbaikan (revisi) minor maupun mayor tanpa tambahan biaya.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Privacy & Keamanan Data</h3>
+                    <p>Seluruh dokumen penelitian dijaga ketat kerahasiaannya dan tidak akan pernah dipublikasi sepihak.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COURSES SECTION (To be populated by JS) -->
-    <section class="courses" id="courses">
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>Jelajahi Program Belajar Kami</h2>
-                <p>Pilih kategori kursus yang sesuai dengan kebutuhan pengembangan karir Anda.</p>
+                <h2>Apa Kata Mereka?</h2>
+                <div class="divider-wave"></div>
+                <p style="margin-top: 1rem;">Ribuan mahasiswa telah membuktikan kemudahan penyusunan tugas akhir bersama Educativa.</p>
             </div>
             
-            <!-- Category Filters -->
-            <div class="course-filters" id="course-filters">
-                <button class="filter-btn active" data-filter="all">Semua Kategori</button>
-                <button class="filter-btn" data-filter="Programming">Programming</button>
-                <button class="filter-btn" data-filter="Data">Data Science</button>
-                <button class="filter-btn" data-filter="Design">Design</button>
-                <button class="filter-btn" data-filter="Marketing">Marketing</button>
-            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">AN</div>
+                        <div class="info">
+                            <h4>Andi N.</h4>
+                            <span>Mahasiswa S2 UI</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-body">"Pelayanan sangat memuaskan! Konsultan sangat paham dengan metode penelitian yang rumit. Tesis saya selesai tepat waktu dan langsung ACC tanpa revisi mayor."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">SI</div>
+                        <div class="info">
+                            <h4>Siti I.</h4>
+                            <span>Mahasiswa S1 UGM</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-body">"Olah data statistik yang tadinya bikin pusing tujuh keliling, kelar hanya dalam 3 hari! Penjelasan dari tutornya sangat sistematis dan mudah dipahami."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i>
+                    </div>
+                </div>
 
-            <div class="course-grid" id="course-grid">
-                <!-- Cards will be dynamically inserted here via JavaScript -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">BW</div>
+                        <div class="info">
+                            <h4>Budi W.</h4>
+                            <span>Mahasiswa S3 ITB</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-body">"Jasa publikasi Scopus-nya sangat rekomendasi. Educativa mendampingi dari tahap proofreading hingga accepted. Terima kasih banyak Educativa!"</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i><i class="fas fa-star text-yellow"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    
 
     <!-- PROMO MODAL -->
     <div class="modal-overlay" id="promo-modal">
@@ -161,10 +273,9 @@
             />
           </div>
           <div class="modal-text">
-            <h3>Diskon Spesial 50%!</h3>
+            <h3>Konsultasi Gratis!</h3>
             <p>
-              Gunakan kode promo <strong>EDU50</strong> untuk semua kelas
-              Premium hari ini.
+              Mulai perjalanan riset Anda bersama EduMentor dan EduResearch. Klaim sesi konsultasi awal Anda secara gratis hari ini. Riset Nggak Perlu Stuck Lagi!
             </p>
             <button
               class="btn btn-primary mt-2"
@@ -179,37 +290,82 @@
       </div>
     </div>
 
+    <!-- KELAS RISET MODAL -->
+    <div class="modal-overlay" id="kelas-riset-modal">
+      <div class="modal-content kr-modal-content">
+        <button class="modal-close" id="kr-modal-close" onclick="closeKelasRisetModal()">&times;</button>
+        <div class="kr-modal-header">
+            <h2 class="kr-modal-title" id="kr-modal-service-title">Layanan EduResearch</h2>
+            <p class="kr-modal-desc">Temukan kelas riset terbaik untuk memperdalam pemahamanmu seputar bimbingan skripsi, tesis, dan disertasi.</p>
+            
+            <div class="kr-modal-controls">
+                <div class="kr-search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="kr-search" placeholder="Cari layanan kelas..." onkeyup="renderKelasRisetCards(document.querySelector('.kr-filter-btn.active').getAttribute('data-filter'), this.value)">
+                </div>
+                <div class="kr-filters">
+                    <button class="kr-filter-btn active" data-filter="all" onclick="updateKRFilter(this)">Semua</button>
+                    <button class="kr-filter-btn" data-filter="Gratis" onclick="updateKRFilter(this)">Gratis</button>
+                    <button class="kr-filter-btn" data-filter="Berbayar" onclick="updateKRFilter(this)">Berbayar</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="kr-modal-body">
+            <div class="kelas-riset-grid" id="kelas-riset-grid">
+                <!-- Kelas Riset Cards will be dynamically inserted here via JS -->
+            </div>
+        </div>
+      </div>
+    </div>
+
     <!-- FOOTER -->
     <footer class="footer" id="contact">
         <div class="container footer-container">
-            <div class="footer-brand">
-                <h3>Educativa<span>.id</span></h3>
-                <p>Platform Learning Management System (LMS) terbaik untuk mendongkrak skill dan karir Anda menuju tingkat profesional.</p>
+            <div class="footer-col brand-col">
+                <a href="#" class="footer-logo">
+                    <img src="assets/Logo-Educativa.png" alt="Educativa Logo" style="height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+                </a>
+                <p>Platform layanan bimbingan KTI, Skripsi, Tesis, Disertasi, Olah Data Statistika & Jurnal Publikasi Berkualitas Berbasis Start-Up Nomor 1 di Indonesia.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="footer-links">
-                <h4>Menu Cepat</h4>
+            
+            <div class="footer-col">
+                <h4>Layanan Kami</h4>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#">Bimbingan Skripsi</a></li>
+                    <li><a href="#">Bimbingan Tesis</a></li>
+                    <li><a href="#">Olah Data Statistik</a></li>
+                    <li><a href="#">Publikasi Jurnal SINTA</a></li>
+                    <li><a href="#">Publikasi Scopus</a></li>
                 </ul>
             </div>
-            <div class="footer-contact">
-                <h4>Kontak Kami</h4>
+
+            <div class="footer-col">
+                <h4>Perusahaan</h4>
                 <ul>
-                    <li><i class="fas fa-envelope"></i> halo@educativa.id</li>
-                    <li><i class="fas fa-phone-alt"></i> +62 812-3456-7890</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Testimoni</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
                 </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4>Hubungi Kami</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Raya Berbah, RT.20/RW.29, Karang Bendo, Banguntapan, Kabupaten Bantul, DIY 55198</p>
+                <p><i class="fas fa-envelope"></i> admin@educativa.id</p>
+                <p><i class="fab fa-whatsapp"></i> 6287785330349</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Educativa.id. Seluruh hak cipta dilindungi.</p>
+            <p>&copy; 2026 PT Educativa Indonesia. All rights reserved.</p>
         </div>
     </footer>
 
